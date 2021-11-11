@@ -1,0 +1,46 @@
+/* commons */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.slider-main{
+    height: 100%;
+    width: 50vw;
+}
+
+.slider-side{
+    width: 20vw;
+    height: 100%;
+}
+
+.box{
+    height: calc(100% / 5);
+    width: auto;
+}
+
+
+
+/* **** debug **** */
+
+.debug .slider-main{
+    border: 1px solid black;
+}
+
+.debug .slider-side{
+    border: 1px solid black;
+}
+
+.debug .box{
+    background-color: rgb(255, 255, 82);
+    border: 1px solid black;
+}
