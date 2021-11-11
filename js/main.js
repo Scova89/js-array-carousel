@@ -11,7 +11,6 @@ const textArray = ['Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
 
 
 // popolo lo slider grande con le immagini in maniera dinamica
-const sliderMain = document.querySelector('.slider-main');
 
 let mainBox = '';
 
@@ -19,8 +18,24 @@ for (let i = 0; i < imagesArray.length; i++) {
     mainBox +=`
     <div class="main-box">
         <img src="${imagesArray[i]}" alt="slider">
-    </div>`
-    
+    </div>`;
+    mainBox += titleArray[i];
+    mainBox += textArray [i]; 
 }
 
-console.log(mainBox);
+// popolo lo slider grande con le immagini in maniera dinamica
+const sliderMain = document.querySelector('.slider-main');
+sliderMain.innerHTML = mainBox;
+
+// seleziono primo elemento
+const item = document.querySelector('.main-box');
+
+// do al primo elemento la classe active
+item.className = 'main-box active'
+
+
+
+
+
+
+
