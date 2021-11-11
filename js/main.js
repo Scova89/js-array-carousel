@@ -9,4 +9,18 @@ const textArray = ['Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',]
 
-console.log(textArray);
+
+// popolo lo slider grande con le immagini in maniera dinamica
+const sliderMain = document.querySelector('.slider-main');
+
+let mainBox = '';
+
+for (let i = 0; i < imagesArray.length; i++) {
+    mainBox +=`
+    <div class="main-box">
+        <img src="${imagesArray[i]}" alt="slider">
+    </div>`
+    
+}
+
+console.log(mainBox);
