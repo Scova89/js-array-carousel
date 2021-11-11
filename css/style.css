@@ -5,29 +5,56 @@
     box-sizing: border-box;
 }
 
-.container{
+body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container{
+    display: flex;
     height: 100vh;
+    width: 70%;
+    
 }
 
 
 .slider-main{
     height: 100%;
-    width: 50vw;
+    width: 80%;
 }
 
 .slider-side{
-    width: 20vw;
+    width: 20%;
     height: 100%;
 }
 
 .box{
     height: calc(100% / 5);
     width: auto;
+    position: relative;
 }
 
+
+.fa-chevron-up{
+    position: absolute;
+    left: 50%;
+    top: 7px;
+    transform: translateX(-50%);
+    background-color: lightgray;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.fa-chevron-down{
+    position: absolute;
+    left: 50%;
+    bottom: 7px;
+    transform: translateX(-50%);
+    background-color: lightgray;
+    border-radius: 50%;
+    padding: 5px;
+}
 
 
 /* **** debug **** */
