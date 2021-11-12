@@ -9,11 +9,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container{
     display: flex;
-    height: 100vh;
+    height: 70vh;
     width: 70%;
     
 }
@@ -27,39 +28,62 @@ body{
 .slider-side{
     width: 20%;
     height: 100%;
+    position: relative;
+}
+
+.sidebox-container{
+    height: 100%;
+    background-color: black;
 }
 
 .main-box{
+    position: relative;
+    display: none;
     height: 100%;
     width: 100%;
 }
 
+
+.main-box.active{
+    display: block;
+}
+
+
+
 .box{
     height: calc(100% / 5);
     width: auto;
-    position: relative;
+    opacity: 0.5;
+}
+
+.box.active{
+    opacity: 1;
+    border: 1px solid white;
 }
 
 
-.fa-chevron-up{
+.su, .giu{
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.su{
     top: 7px;
-    transform: translateX(-50%);
-    background-color: lightgray;
-    border-radius: 50%;
-    padding: 5px;
 }
 
-.fa-chevron-down{
-    position: absolute;
-    left: 50%;
+
+.giu{
     bottom: 7px;
-    transform: translateX(-50%);
-    background-color: lightgray;
-    border-radius: 50%;
-    padding: 5px;
 }
+
 
 img{
     object-fit: cover;
@@ -67,9 +91,19 @@ img{
     width: 100%;
 }
 
+.testo{
+    position: absolute;
+    text-align: right;
+    color: white;
+    padding: 0 10px 8px;
+    right: 20px;
+    bottom: 10px;
+    
+}
+
 /* **** debug **** */
 
-.debug .slider-main{
+/* .debug .slider-main{
     border: 1px solid black;
 }
 
@@ -80,4 +114,4 @@ img{
 .debug .box{
     background-color: rgb(255, 255, 82);
     border: 1px solid black;
-}
+} */

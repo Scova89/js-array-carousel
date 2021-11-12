@@ -35,9 +35,40 @@ document.querySelector('.box').classList.add('active');
 
 
 let su = document.querySelector('.su');
-let su = document.querySelector('.su');
+let giu = document.querySelector('.giu');
 
+let bigBox = document.getElementsByClassName('main-box');
+let smallBox = document.getElementsByClassName('box');
 
+let contatore = 0;
+
+giu.addEventListener('click', function(){
+    bigBox[contatore].classList.remove('active');
+    smallBox[contatore].classList.remove('active');
+    if(contatore+1 < smallBox.length){
+        contatore ++;
+    }else{
+        contatore = 0;
+    }
+    
+    bigBox[contatore].classList.add('active');
+    smallBox[contatore].classList.add('active');
+    
+
+})
+
+su.addEventListener('click', function(){
+    bigBox[contatore].classList.remove('active');
+    smallBox[contatore].classList.remove('active');
+    if(contatore > 0){
+        contatore --;
+    }else{
+        contatore = smallBox.length-1;
+    }
+    bigBox[contatore].classList.add('active');
+    smallBox[contatore].classList.add('active');
+
+})
 
 
 
