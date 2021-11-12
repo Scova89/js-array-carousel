@@ -1,37 +1,48 @@
 // Array di immagini
-const imagesArray = ['img/01.jpg','img/02.jpg','img/03.jpg','img/04.jpg','img/05.jpg'];
+const images = ['img/01.jpg','img/02.jpg','img/03.jpg','img/04.jpg','img/05.jpg'];
 
-const titleArray = ['Svezia','Svizzera','Gran Bretagna','Germania','Paradise'];
+const title = ['Svezia','Svizzera','Gran Bretagna','Germania','Paradise'];
 
-const textArray = ['Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+const text = ['Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
 'Lorem ipsum',
 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',]
+'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'];
 
-
-// popolo lo slider grande con le immagini in maniera dinamica
-
-let mainBox = '';
-
-for (let i = 0; i < imagesArray.length; i++) {
-    mainBox +=`
+// creo un ciclo con gli array
+for(let i=0; i < images.length; i++){
+    // richiamo la classe che contiene tutti gli elementi e ne ricreo i contenuti in js
+    document.querySelector('.slider-main').innerHTML += `
     <div class="main-box">
-        <img src="${imagesArray[i]}" alt="slider">
+        <img src="${images[i]}" alt="${title[i]}">
+        <div class="testo">
+            <h2>${title[i]}</h2>
+            <p>${text[i]}</p>
+        </div>
     </div>`;
-    mainBox += titleArray[i];
-    mainBox += textArray [i]; 
+
+    document.querySelector('.sidebox-container').innerHTML += `
+    <div class="box">
+        <img src="${images[i]}" alt="${title[i]} thumbnails">
+    </div>
+    `;
 }
 
-// popolo lo slider grande con le immagini in maniera dinamica
-const sliderMain = document.querySelector('.slider-main');
-sliderMain.innerHTML = mainBox;
+// aggiungo la classe "active" alla classe contenente gli elementi esistenti
+document.querySelector('.main-box').classList.add('active');
 
-// seleziono primo elemento
-const item = document.querySelector('.main-box');
+document.querySelector('.box').classList.add('active');
 
-// do al primo elemento la classe active
-item.className = 'main-box active'
+
+let su = document.querySelector('.su');
+let su = document.querySelector('.su');
+
+
+
+
+
+
+
 
 
 
